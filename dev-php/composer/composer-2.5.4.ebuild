@@ -1,11 +1,11 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
 
 DESCRIPTION="Dependency Manager for PHP"
 HOMEPAGE="https://github.com/composer/composer"
-SRC_URI="https://github.com/${PN}/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/composer/composer/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -14,31 +14,31 @@ KEYWORDS="amd64 x86"
 BDEPEND="dev-php/theseer-Autoload"
 
 RDEPEND="dev-lang/php:*[curl]
-        >=dev-php/ca-bundle-1.0
-        >=dev-php/class-map-generator-1.0
-        >=dev-php/metadata-minifier-1.0
-        >=dev-php/pcre-2.1
-        >=dev-php/semver-3.0
-        >=dev-php/spdx-licenses-1.5
-        >=dev-php/xdebug-handler-2
-        >=dev-php/json-schema-5.2.11
-        >=dev-php/psr-log-1.0
-        >=dev-php/jsonlint-1.4
-        >=dev-php/phar-utils-1.2
-        >=dev-php/symfony-console-5.4.11
-        >=dev-php/symfony-filesystem-5.4
-        >=dev-php/symfony-finder-5.4
-        >=dev-php/symfony-process-5.4
-        >=dev-php/reactphp-promise-2.8
-        >=dev-php/symfony-polyfill-php80-1.24
-        >=dev-php/symfony-polyfill-php81-1.24
-        >=dev-php/signal-handler-2
-        dev-php/fedora-autoloader"
+	>=dev-php/ca-bundle-1.0
+	>=dev-php/class-map-generator-1.0
+	>=dev-php/metadata-minifier-1.0
+	>=dev-php/pcre-2.1
+	>=dev-php/semver-3.0
+	>=dev-php/spdx-licenses-1.5
+	>=dev-php/xdebug-handler-2
+	>=dev-php/json-schema-5.2.11
+	>=dev-php/psr-log-1.0
+	>=dev-php/jsonlint-1.4
+	>=dev-php/phar-utils-1.2
+	>=dev-php/symfony-console-5.4.11
+	>=dev-php/symfony-filesystem-5.4
+	>=dev-php/symfony-finder-5.4
+	>=dev-php/symfony-process-5.4
+	>=dev-php/reactphp-promise-2.8
+	>=dev-php/symfony-polyfill-php80-1.24
+	>=dev-php/symfony-polyfill-php81-1.24
+	>=dev-php/signal-handler-2
+	dev-php/fedora-autoloader"
 
 # dependency to >=dev-php/symfony-polyfill-php73-1.24 dropped, because PHP 7.3 is not longer in portage
 
 PATCHES=(
-        "${FILESDIR}"/autoload.patch
+	"${FILESDIR}"/autoload.patch
 )
 
 src_prepare() {
