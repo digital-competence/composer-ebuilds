@@ -48,7 +48,7 @@ src_prepare() {
 
 	phpab \
 		--output vendor/autoload.php \
-		--template "${FILESDIR}"/autoload.php.tpl \
+		--template fedora2 \
 		--basedir src \
 		src \
 		|| die
