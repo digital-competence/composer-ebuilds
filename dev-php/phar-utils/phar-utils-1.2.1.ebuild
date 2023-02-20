@@ -11,11 +11,11 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
+BDEPEND="dev-php/theseer-Autoload"
+
 RDEPEND="
 	dev-lang/php:*[phar]
 	dev-php/fedora-autoloader"
-
-BDEPEND="dev-php/theseer-Autoload"
 
 src_prepare() {
 	default

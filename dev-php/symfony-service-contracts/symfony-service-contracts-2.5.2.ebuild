@@ -12,9 +12,10 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
+BDEPEND="dev-php/theseer-Autoload"
+
 RDEPEND="
 	dev-lang/php:*"
-BDEPEND="dev-php/theseer-Autoload"
 
 S="${WORKDIR}/service-contracts-${PV}"
 

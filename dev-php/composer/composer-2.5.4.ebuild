@@ -48,7 +48,7 @@ src_prepare() {
 
 	phpab \
 		--output vendor/autoload.php \
-		--template fedora2 \
+		--template "${FILESDIR}"/autoload.php.tpl \
 		--basedir src \
 		src \
 		|| die
@@ -74,6 +74,7 @@ src_prepare() {
 	'/usr/share/php/JsonSchema/autoload.php',
 	'/usr/share/php/React/Promise/autoload.php',
 	'/usr/share/php/Symfony/Component/PolyfillCtype/autoload.php',
+	'/usr/share/php/Symfony/Component/DeprecationContracts/autoload.php',
 	'/usr/share/php/Symfony/Component/ServiceContracts/autoload.php',
 	'/usr/share/php/Symfony/Component/PolyfillIntlNormalizer/autoload.php',
 	'/usr/share/php/Symfony/Component/Filesystem/autoload.php',

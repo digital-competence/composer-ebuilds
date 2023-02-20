@@ -37,7 +37,7 @@ src_prepare() {
 
 src_install() {
 	insinto '/usr/share/php/Symfony/Component/Filesystem'
-	doins -r *.php
+	doins -r Exception *.php
 
 	einstalldocs
 }

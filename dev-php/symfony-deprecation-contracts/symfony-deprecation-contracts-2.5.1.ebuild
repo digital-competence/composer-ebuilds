@@ -12,14 +12,24 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
+BDEPEND="dev-php/theseer-Autoload"
+
 RDEPEND="
 	dev-lang/php:*"
 
 S="${WORKDIR}/deprecation-contracts-${PV}"
 
+src_prepare() {
+	default
+
+	echo "<?php" >> autoload.php
+	echo "\Fedora\Autoloader\Dependencies::required([__DIR__ . '/function.php']);" >> autoload.php
+}
+
+
 src_install() {
 	insinto '/usr/share/php/Symfony/Component/DeprecationContracts'
-	doins -r *
+	doins -r *.php
 
 	einstalldocs
 }
