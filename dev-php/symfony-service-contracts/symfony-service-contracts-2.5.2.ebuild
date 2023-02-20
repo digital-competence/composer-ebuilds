@@ -30,7 +30,7 @@ src_prepare() {
 
 src_install() {
 	insinto '/usr/share/php/Symfony/Component/ServiceContracts'
-	doins -r *.php
+	doins -r Attribute *.php
 
 	einstalldocs
 }
