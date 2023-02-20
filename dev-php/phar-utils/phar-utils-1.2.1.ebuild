@@ -15,6 +15,8 @@ RDEPEND="
 	dev-lang/php:*[phar]
 	dev-php/fedora-autoloader"
 
+BDEPEND="dev-php/theseer-Autoload"
+
 src_prepare() {
 	default
 
