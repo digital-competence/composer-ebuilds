@@ -35,7 +35,7 @@ src_prepare() {
 
 src_install() {
 	insinto '/usr/share/php/Symfony/Component/Finder'
-	doins -r *.php
+	doins -r Comparator Exception Iterator *.php
 
 	einstalldocs
 }
