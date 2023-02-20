@@ -14,6 +14,7 @@ KEYWORDS="amd64 x86"
 
 RDEPEND="
 	dev-lang/php:*"
+BDEPEND="dev-php/theseer-Autoload"
 
 S="${WORKDIR}/service-contracts-${PV}"
 
