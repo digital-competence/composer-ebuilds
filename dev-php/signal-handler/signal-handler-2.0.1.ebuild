@@ -14,8 +14,8 @@ IUSE=""
 
 BDEPEND="dev-php/theseer-Autoload"
 
-RDEPEND="dev-php/fedora-autoloader
-	dev-lang/php:*"
+RDEPEND="dev-lang/php:*
+	dev-php/fedora-autoloader"
 
 src_prepare() {
 	default
