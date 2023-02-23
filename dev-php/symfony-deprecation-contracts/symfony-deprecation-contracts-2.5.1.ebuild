@@ -12,10 +12,9 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
-BDEPEND="dev-php/theseer-Autoload"
-
 RDEPEND="
-	dev-lang/php:*"
+	dev-lang/php:*
+	dev-php/fedora-autoloader"
 
 S="${WORKDIR}/deprecation-contracts-${PV}"
 
@@ -23,6 +22,7 @@ src_prepare() {
 	default
 
 	echo "<?php" >> autoload.php
+	echo "require_once '/usr/share/php/Fedora/Autoloader/autoload.php';" >> autoload.php
 	echo "\Fedora\Autoloader\Dependencies::required([__DIR__ . '/function.php']);" >> autoload.php
 }
 
