@@ -14,7 +14,7 @@ KEYWORDS="amd64 x86"
 BDEPEND="dev-php/theseer-Autoload"
 
 RDEPEND="dev-php/fedora-autoloader
-	>=dev-lang/php-7.2:*"
+	dev-lang/php:*"
 
 src_prepare() {
 	default
