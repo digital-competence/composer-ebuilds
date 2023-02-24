@@ -13,16 +13,16 @@ KEYWORDS="amd64 x86"
 
 BDEPEND="dev-php/theseer-Autoload"
 
-RDEPEND="
-	dev-lang/php:*[phar]
+RDEPEND="dev-lang/php:*[phar]
 	dev-php/fedora-autoloader"
 
 src_prepare() {
 	default
 
 	phpab \
+		--quiet \
 		--output src/autoload.php \
-		--template fedora2 \
+		--template fedora \
 		--basedir src \
 		src \
 		|| die

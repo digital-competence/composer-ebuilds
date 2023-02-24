@@ -1,7 +1,7 @@
 <?php
 // @codingStandardsIgnoreFile
 // @codeCoverageIgnoreStart
-require_once 'Fedora/Autoloader'.'/autoload.php';
+require_once '/usr/share/php/Fedora/Autoloader'.'/autoload.php';
 
 \Fedora\Autoloader\Autoload::addClassMap(
     array(

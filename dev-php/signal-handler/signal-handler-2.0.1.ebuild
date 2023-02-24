@@ -10,7 +10,6 @@ SRC_URI="https://github.com/Seldaek/signal-handler/archive/${PV}.tar.gz -> ${P}.
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE=""
 
 BDEPEND="dev-php/theseer-Autoload"
 
@@ -21,8 +20,9 @@ src_prepare() {
 	default
 
 	phpab \
+		--quiet \
 		--output src/autoload.php \
-		--template fedora2 \
+		--template fedora \
 		--basedir src/ \
 		src \
 		|| die

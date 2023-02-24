@@ -14,8 +14,7 @@ KEYWORDS="amd64 x86"
 
 BDEPEND="dev-php/theseer-Autoload"
 
-RDEPEND="
-	dev-lang/php:*
+RDEPEND="dev-lang/php:*
 	>=dev-php/symfony-deprecation-contracts-2.1
 	>=dev-php/symfony-polyfill-ctype-1.8
 	>=dev-php/symfony-polyfill-mbstring-1.8
@@ -28,8 +27,9 @@ src_prepare() {
 	default
 
 	phpab \
+		--quiet \
 		--output autoload.php \
-		--template fedora2 \
+		--template fedora \
 		--basedir . \
 		. \
 		|| die

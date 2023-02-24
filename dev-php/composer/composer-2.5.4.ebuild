@@ -47,6 +47,7 @@ src_prepare() {
 	mkdir vendor || die
 
 	phpab \
+		--quiet \
 		--output vendor/autoload.php \
 		--template "${FILESDIR}"/autoload.php.tpl \
 		--basedir src \
