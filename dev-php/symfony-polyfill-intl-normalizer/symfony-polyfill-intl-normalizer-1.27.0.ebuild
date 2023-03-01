@@ -14,8 +14,7 @@ KEYWORDS="amd64 x86"
 
 BDEPEND="dev-php/theseer-Autoload"
 
-RDEPEND="
-	dev-lang/php:*
+RDEPEND="dev-lang/php:*
 	dev-php/fedora-autoloader"
 
 S="${WORKDIR}/polyfill-intl-normalizer-${PV}"
@@ -24,6 +23,7 @@ src_prepare() {
 	default
 
 	phpab \
+		--quiet \
 		--output autoload.php \
 		--template fedora2 \
 		--basedir . \
