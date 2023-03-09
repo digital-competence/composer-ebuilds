@@ -25,7 +25,7 @@ RDEPEND="dev-lang/php:*
 S="${WORKDIR}/string-${PV}"
 
 src_prepare() {
-	defaults
+	default
 
 	phpab \
 		--quiet \
