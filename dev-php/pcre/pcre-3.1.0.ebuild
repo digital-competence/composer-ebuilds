@@ -5,8 +5,7 @@ EAPI=8
 
 DESCRIPTION="PCRE wrapping library that offers type-safe preg_* replacements."
 HOMEPAGE="https://github.com/composer/pcre"
-SRC_URI="https://github.com/composer/pcre/archive/${PV}.tar.gz
-	-> ${P}.tar.gz"
+SRC_URI="https://github.com/composer/pcre/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -14,8 +13,7 @@ KEYWORDS="amd64 x86"
 
 BDEPEND="dev-php/theseer-Autoload"
 
-RDEPEND="
-	dev-lang/php:*
+RDEPEND="dev-lang/php:*
 	dev-php/fedora-autoloader"
 
 S="${WORKDIR}/pcre-${PV}"
@@ -24,6 +22,7 @@ src_prepare() {
 	default
 
 	phpab \
+		--quiet \
 		--output src/autoload.php \
 		--template fedora2 \
 		--basedir src \

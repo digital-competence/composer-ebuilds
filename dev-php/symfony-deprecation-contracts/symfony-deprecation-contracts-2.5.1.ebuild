@@ -12,8 +12,7 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
-RDEPEND="
-	dev-lang/php:*
+RDEPEND="dev-lang/php:*
 	dev-php/fedora-autoloader"
 
 S="${WORKDIR}/deprecation-contracts-${PV}"
@@ -25,7 +24,6 @@ src_prepare() {
 	echo "require_once '/usr/share/php/Fedora/Autoloader/autoload.php';" >> autoload.php
 	echo "\Fedora\Autoloader\Dependencies::required([__DIR__ . '/function.php']);" >> autoload.php
 }
-
 
 src_install() {
 	insinto '/usr/share/php/Symfony/Component/DeprecationContracts'
